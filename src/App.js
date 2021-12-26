@@ -4,12 +4,15 @@ import VR from './components/VR'
 import RR from './components/RR'
 
 function App() {
+  let rand = Math.floor(Math.random());
+  let first = (rand < 0.5) ? 1 : 2;
+  let second = (first === 1) ? 2 : 1;
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
         <p>
-          請試玩兩台機器若干次之後，填寫以下回饋表單!
+          遊玩步驟:<br />1. 先玩Machine {first}<br />2. 再玩Machine {second}<br />3. 填寫以下回饋表單!
         </p>
         <VR />
         <RR />
